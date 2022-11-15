@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowser", "AssemblyBrowser.csproj", "{92570CB6-B5E4-4F9C-A209-42803B8AE7E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyBrowser", "AssemblyBrowser.csproj", "{92570CB6-B5E4-4F9C-A209-42803B8AE7E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowserLib", "..\AssemblyBrowserLib\AssemblyBrowserLib.csproj", "{D0E501F6-B51B-4CA7-954E-3821CA0ADD50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyBrowserLib", "..\AssemblyBrowserLib\AssemblyBrowserLib.csproj", "{D0E501F6-B51B-4CA7-954E-3821CA0ADD50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowserTests", "..\AssemblyBrowserTests\AssemblyBrowserTests.csproj", "{D84EB5DF-FEC0-49F6-91AD-05AAA260BAA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAssemblyInstance", "..\TestAssemblyInstance\TestAssemblyInstance.csproj", "{9DFC09F8-B21D-47E3-8876-FA1401E2CC19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{D0E501F6-B51B-4CA7-954E-3821CA0ADD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0E501F6-B51B-4CA7-954E-3821CA0ADD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0E501F6-B51B-4CA7-954E-3821CA0ADD50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D84EB5DF-FEC0-49F6-91AD-05AAA260BAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84EB5DF-FEC0-49F6-91AD-05AAA260BAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84EB5DF-FEC0-49F6-91AD-05AAA260BAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84EB5DF-FEC0-49F6-91AD-05AAA260BAA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFC09F8-B21D-47E3-8876-FA1401E2CC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFC09F8-B21D-47E3-8876-FA1401E2CC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFC09F8-B21D-47E3-8876-FA1401E2CC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFC09F8-B21D-47E3-8876-FA1401E2CC19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

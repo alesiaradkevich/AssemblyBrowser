@@ -1,0 +1,25 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using AssemblyBrowserLib;
+using System.IO;
+using AssemblyBrowserLib.Assembly;
+namespace AssemblyBrowserTests
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        public string pathToAssembly (){
+            return Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\..\\dll\\TestAssemblyInstance.dll");
+        }
+        [TestMethod]
+        public void TestMethod1()
+        {
+            AssemblyInstance AI = AssemblyBrowser.LoadAssembly(pathToAssembly());
+            Assert.IsTrue(AI.Name.StartsWith("TestAssemblyInstance"));
+            Assert.AreEqual(AI.Namespaces.Count, 2);
+            Assert.AreEqual(AI.Namespaces["ns1"].Name, "ns1");
+            Assert.AreEqual(AI.Namespaces["ns2"].Name, "ns2");
+            Assert.AreEqual(AI.Namespaces["ns1"].Types.Count, 1);
+            Assert.AreEqual(AI.Namespaces["ns1"].Types[0].Name, "ns1.Class1");
+        }
+    }
+}

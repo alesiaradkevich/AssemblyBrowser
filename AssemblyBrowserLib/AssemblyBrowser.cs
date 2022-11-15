@@ -11,7 +11,7 @@ namespace AssemblyBrowserLib
 {
     public class AssemblyBrowser
     {
-        public AssemblyInstance LoadAssembly(string pathToAssembly)
+        public static AssemblyInstance LoadAssembly(string pathToAssembly)
         {
             var assembly = System.Reflection.Assembly.LoadFrom(pathToAssembly);
             var exportedNamespaces = new Dictionary<string, NamespaceInfo>();
@@ -34,7 +34,7 @@ namespace AssemblyBrowserLib
             }
             return new AssemblyInstance(assembly.FullName, exportedNamespaces);
         }
-        public List<Field> GetTypeFields(Type type)
+        public static List<Field> GetTypeFields(Type type)
         {
             var fields = new List<Field>();
             foreach (var field in type.GetRuntimeFields())
@@ -44,7 +44,7 @@ namespace AssemblyBrowserLib
             return fields;
 
         }
-        public List<Property> GetTypeProperties(Type type)
+        public static List<Property> GetTypeProperties(Type type)
         {
             var properties = new List<Property>();
             foreach (var property in type.GetRuntimeProperties())
@@ -54,7 +54,7 @@ namespace AssemblyBrowserLib
             }
             return properties;
         }
-        public List<Method> GetTypeMethods(Type type)
+        public static List<Method> GetTypeMethods(Type type)
         {
             var methods = new List<Method>();
             string name;
