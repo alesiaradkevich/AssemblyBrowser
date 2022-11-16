@@ -15,10 +15,10 @@ using AssemblyBrowserLib.Assembly.Namespace.Types.Elements;
 
 namespace AssemblyBrowser
 {
-    public class MainWindowModel
+    public class MainWindowModel: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public AssemblyInstance Assembly;
+        public AssemblyBrowserLib.AssemblyBrowser Assembly;
         private ObservableCollection<TreeNode> _nodes;
         public ObservableCollection<TreeNode> Nodes
         {
@@ -70,7 +70,7 @@ namespace AssemblyBrowser
             }
             return collection;
         }
-        public void LoadAssembly(object o, RoutedEventArgs e)
+        public void LoadAssembly(object o=null, RoutedEventArgs e=null)
         {
             var fileDialog = new OpenFileDialog();
             fileDialog.Filter += "DllFiles (*.dll)|*.dll";
@@ -78,7 +78,7 @@ namespace AssemblyBrowser
             {
                 return;
             }
-            Assembly = AssemblyBrowserLib.AssemblyBrowser.LoadAssembly(fileDialog.FileName);
+            Assembly = new AssemblyBrowserLib.AssemblyBrowser(fileDialog.FileName);
             Nodes = new ObservableCollection<TreeNode>
             {
                 new TreeNode(Assembly.ToString(), NsToCollection(Assembly.Namespaces))

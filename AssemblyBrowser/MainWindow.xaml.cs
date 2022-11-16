@@ -20,18 +20,20 @@ namespace AssemblyBrowser
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {        
-        
+    {
+        MainWindowModel Model;
         
         public MainWindow()
         {
             InitializeComponent();
-            var Model = new MainWindowModel();
-            DataContext = Model;
+            Model = new MainWindowModel();
+            DataContext = Model; 
             var commandBinding = new CommandBinding();
             commandBinding.Command = ApplicationCommands.Open;
             commandBinding.Executed += Model.LoadAssembly;
             btnLoad.CommandBindings.Add(commandBinding);
+           // Model.LoadAssembly();
+           // treeView1.Items.Add(Model.Nodes);
         }
 
         

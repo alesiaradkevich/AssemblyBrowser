@@ -13,7 +13,7 @@ namespace AssemblyBrowserTests
         [TestMethod]
         public void TestMethod1()
         {
-            AssemblyInstance AI = AssemblyBrowser.LoadAssembly(pathToAssembly());
+            AssemblyBrowser AI = new AssemblyBrowser(pathToAssembly());
             Assert.IsTrue(AI.Name.StartsWith("TestAssemblyInstance"));
             Assert.AreEqual(AI.Namespaces.Count, 2);
             Assert.AreEqual(AI.Namespaces["ns1"].Name, "ns1");
